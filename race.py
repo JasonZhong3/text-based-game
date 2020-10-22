@@ -46,7 +46,7 @@ start.fd(1000)
 
 random_forward = [20, 30, 40, 50]
 colors = ["green", "red", "yellow"]
-for x in range(100):
+for x in range(20):
     jason.fd(random.choice(random_forward))
     jason.color(random.choice(colors))
     ivan.fd(random.choice(random_forward))
@@ -57,7 +57,3 @@ for x in range(100):
 
 # if either turtle goes fd 600 bits, the race stops and the
 # winner is the turtle that  crosses first.
-if turtle.distance > 600:
-    turtle.clear
-
-turtle.mainloop()
