@@ -17,7 +17,7 @@ jason.width(10)
 jason.speed(10)
 
 
-jason.write("--Turtle Graphics Race--",  font=("Times New Roman", 30, "bold"))
+jason.write("--Turtle Graphics Race--",  font=("Times New Roman", 25, "bold"))
 
 
 
@@ -54,5 +54,5 @@ for x in range(100):
     ivan.color(random.choice(colors))
     time.sleep(0.5)
 
-    
+
 turtle.mainloop()
