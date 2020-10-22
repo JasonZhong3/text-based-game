@@ -7,6 +7,10 @@ ivan = turtle. Turtle()
 start = turtle.Turtle()
 end = turtle.Turtle
 
+jason.penup()
+jason.setposition(-150, 300)
+jason.pendown()
+jason.write("--Turtle Graphics Race--",  font=("Times New Roman", 25, "bold"))
 jason.shape("turtle")
 jason.color("gold")
 jason.speed(20)
@@ -15,11 +19,6 @@ jason.setposition(-310,-150)
 jason.pendown()
 jason.width(10)
 jason.speed(10)
-
-
-jason.write("--Turtle Graphics Race--",  font=("Times New Roman", 25, "bold"))
-
-
 
 #forward, backward, left, right, shape, goto, setposition, penup, pendown, color, clear
 ivan.shape("turtle")
@@ -45,14 +44,20 @@ start.color("red")
 start.pendown()
 start.fd(1000)
 
-random_forward = [10, 20, 30, 40, 50]
+random_forward = [20, 30, 40, 50]
 colors = ["green", "red", "yellow"]
 for x in range(100):
     jason.fd(random.choice(random_forward))
     jason.color(random.choice(colors))
     ivan.fd(random.choice(random_forward))
     ivan.color(random.choice(colors))
+    jason.speed(3)
+    ivan.speed(3)
     time.sleep(0.5)
 
+# if either turtle goes fd 600 bits, the race stops and the
+# winner is the turtle that  crosses first.
+if turtle.distance > 600:
+    turtle.clear
 
 turtle.mainloop()
