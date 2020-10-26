@@ -30,7 +30,7 @@ ivan.pendown()
 ivan.width(10)
 ivan.speed(10)
 
-start.speed(50)
+start.speed(0)
 start.color("green")
 start.pensize(5)
 start.penup()
@@ -44,9 +44,9 @@ start.color("red")
 start.pendown()
 start.fd(1000)
 
-random_forward = [20, 30, 40, 50]
+random_forward = [30, 40, 50, 60, 70]
 colors = ["green", "red", "yellow"]
-for x in range(20):
+for x in range(15):
     jason.fd(random.choice(random_forward))
     jason.color(random.choice(colors))
     ivan.fd(random.choice(random_forward))
@@ -54,6 +54,15 @@ for x in range(20):
     jason.speed(3)
     ivan.speed(3)
     time.sleep(0.5)
+    
+    x , y= jason.pos()
+    if x > 300:
+        start.penup()
+        start.setpos(-75, 0)
+        start.pendown
+        start.write("--You Win--",  font=("Times New Roman", 25, "bold"))
 
 # if either turtle goes fd 600 bits, the race stops and the
 # winner is the turtle that  crosses first.
+
+turtle.mainloop()
